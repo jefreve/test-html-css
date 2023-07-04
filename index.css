@@ -1,0 +1,70 @@
+:root {
+  --body-bg: #f5f5fb;
+  --side-bg: #ffffff;
+  --box-bg: #c4c4c4;
+  --box-gap: 20px;
+  --side-l-w: 200px;
+  --side-r-w: 250px;
+}
+body {
+  width: 100vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "left-side centered right-side";
+  gap: var(--box-gap);
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: var(--side-l-w) 1fr var(--side-r-w);
+  margin: 0 auto;
+}
+
+.first-column {
+  grid-area: left-side;
+  background-color: var(--side-bg);
+  /* display: grid; */
+}
+
+.second-column {
+  grid-area: centered;
+  background-color: var(--body-bg);
+}
+
+.third-column {
+  grid-area: right-side;
+  background-color: var(--side-bg);
+}
+
+.element-one {
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  flex: 1;
+  background-color: var(--box-bg);
+  margin: 1em;
+}
+
+.rectangle {
+  flex: 4;
+  background-color: var(--box-bg);
+  margin: 1em;
+}
+
+.element-two {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  flex: 1;
+  background-color: var(--box-bg);
+  margin: 1em;
+}
+
+.big-square {
+  background-color: var(--box-bg);
+  margin: 1em;
+}
